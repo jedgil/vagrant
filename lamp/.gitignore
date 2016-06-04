@@ -1,3 +1,5 @@
 phplib/config.php
 vendor
 .idea
+.DS_Store
+.vagrant
