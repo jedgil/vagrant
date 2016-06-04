@@ -29,12 +29,12 @@ class JIRAHints {
         $this->username = $username;
         $this->events_from = $events_from;
         $this->events_to = $events_to;
-        $this->jira_api_url = $config['https://jira-test.americas.nwea.pvt/rest/api/2/'];
-        $this->jira_url = $config['https://jira-test.americas.nwea.pvt'];
+        $this->jira_api_url = $config['jira_api_url'];
+        $this->jira_url = $config['jira_url'];
 
         $this->jira_context = stream_context_create(array(
             'http' => array(
-                'header'  => "Authorization: Basic " . base64_encode("{$config['jed.gilchrist']}:{$config['password']}")
+                'header'  => "Authorization: Basic " . base64_encode("{$config['username']}:{$config['password']}")
             )
         ));
 
